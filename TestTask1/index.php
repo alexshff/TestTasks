@@ -4,10 +4,10 @@ define("LIMIT", 2000000);
 
 $range = array_fill_keys(range(3, LIMIT, 2), true);
 
-for($i=3;$i**2 <= LIMIT;$i++)
+for($i=3; $i**2 <= LIMIT; $i++)
 {
     if (isset($range[$i]) and $range[$i]){
-        for($j=$i**2; $j <= LIMIT;$j=$j+$i){
+        for($j=$i**2; $j <= LIMIT; $j=$j+$i){
             $range[$j] = false;
         }
     }
